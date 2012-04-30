@@ -25,3 +25,7 @@ tags: []
     rvm reinstall 1.9.3 --with-readline-dir=YOUR_READLINE_PATH
 
 **如果你是 Mac 平台，如果安装失败，尝试加上 `--with-gcc=clang`**
+
+---
+
+Reference: [https://rvm.io/packages/readline/](https://rvm.io/packages/readline/)
