@@ -14,6 +14,7 @@
     <!-- Le styles -->
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/stylesheets/layouts.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -34,6 +35,11 @@
             {% assign pages_list = site.pages %}
             {% assign group = 'navigation' %}
             {% include JB/pages_list %}
+          </ul>
+          <ul class="nav pull-right" id="social-icons">
+            <li><a href="https://github.com/HungYuHei" target="_blank"><img src="/assets/images/github-icon.png" alt="Github" /></a></li>
+            <li><a href="http://weibo.com/kongruxi" target="_blank"><img src="/assets/images/weibo-icon.png" alt="Weibo" /></a></li>
+            <li><a href="https://twitter.com/HungYuHei" target="_blank"><img src="/assets/images/twitter-icon.png" alt="Twitter" /></a></li>
           </ul>
         </div>
       </div>
