@@ -40,9 +40,11 @@ Git 作为分布式版本控制系统，所有修改操作都是基于本地的�
                
 结果多出了 `H` 这个没必要的提交记录。如果是执行 `git pull --rebase` 的话，提交线图就会变成这样：
 
-               D---E---F---G---A'---B'---C'  master, remotes/origin/master
+                           remotes/origin/master
+                               |
+               D---E---A---B---C---F'---G'  master
                
-多余的分叉去掉了，目的达到。
+`E` `F` 两个提交通过 `rebase` 方式重新拼接在 `C` 之后，多余的分叉去掉了，目的达到。
 
 ### 小结
 大多数时候，使用 `git pull --rebase ` 是为了使提交线图更好看，从而方便 code review。
