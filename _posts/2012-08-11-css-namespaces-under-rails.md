@@ -16,7 +16,7 @@ Namespaces（命名空间）的作用最主要是可以模块化 (modular)，以
 在 layout 中：
 
     # app/views/layouts/application.html.erb
-    ……
+   ……
     <body class="<%= content_for?(:body_class) ? yield(:body_class) : '' %>">
       ……
     </body>
@@ -42,7 +42,7 @@ CSS 需要在每个相关样式前都加 body.example_name 显得有点麻烦，
 假设你在 layout 中引用了 application.sass（当然最终编译出来应该是 application.css），那你可以将某个模块用的样式分割到单独文件中，然后在 application.sass 中 import 就可以：
 
     # app/assets/stylesheets/application.sass
-    @import "modules/_users.sass"
+    @import "modules/_users"
     ……
     
 单独模块的样式：
