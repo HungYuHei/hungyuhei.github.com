@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "irb 不能输入中文"
-description: ""
+description: "irb 不能输入中文"
 category: 
-tags: []
+tags: [Ruby]
 ---
 {% include JB/setup %}
 

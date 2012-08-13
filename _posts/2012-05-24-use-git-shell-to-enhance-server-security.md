@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "使用 git-shell 增加 Git 服务器安全"
-description: ""
+title: "使用 git-shell 增强 Git 服务器安全"
+description: "使用 git-shell 增强 Git 服务器安全"
 category: 
-tags: [Git]
+tags: [Git, Linux]
 ---
 {% include JB/setup %}
 

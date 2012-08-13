@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "My first post"
+description: "My first post"
 category:
 tags: []
 ---

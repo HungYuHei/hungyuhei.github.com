@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "在Ubuntu 10.04 安装 JDK7"
-description: ""
+title: "Ubuntu 10.04 安装 JDK7"
+description: "Ubuntu 10.04 安装 JDK7"
 category: 
-tags: [JDK, Ubuntu]
+tags: [Linux]
 ---
 {% include JB/setup %}
 

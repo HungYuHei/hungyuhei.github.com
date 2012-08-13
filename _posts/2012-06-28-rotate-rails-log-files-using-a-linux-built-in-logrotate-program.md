@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "使用 Linux 的 logrotate 拆分 Rails 的 log"
-description: ""
+description: "使用 Linux 的 logrotate 拆分 Rails 的 log"
 category: 
-tags: ['Rails']
+tags: [Rails, Linux]
 ---
 {% include JB/setup %}
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "利用 Redis 记录 PageView 并实时查询数据"
-description: ""
+description: "利用 Redis 记录 PageView 并实时查询数据"
 category: 
 tags: [Redis, Rails]
 ---

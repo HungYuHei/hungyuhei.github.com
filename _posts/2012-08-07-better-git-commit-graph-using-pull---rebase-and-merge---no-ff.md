@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "洁癖者用 Git：pull --rebase 和 merge --no-ff"
-description: ""
+description: "洁癖者用 Git：pull --rebase 和 merge --no-ff"
 category: 
 tags: [Git]
 ---

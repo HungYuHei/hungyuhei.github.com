@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Rails 中实现 CSS Namespaces 机制"
-description: ""
+title: "基于 Rails 实现 CSS Namespaces 机制"
+description: "基于 Rails 实现 CSS Namespaces 机制"
 category: 
-tags: [Rails]
+tags: [Rails, CSS]
 ---
 {% include JB/setup %}
 

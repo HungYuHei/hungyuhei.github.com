@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Nginx错误：413 Request Entity Too Large"
-description: ""
+title: "修复 Nginx 错误：413 Request Entity Too Large"
+description: "修复 Nginx 错误：413 Request Entity Too Large"
 category: 
 tags: ['Nginx']
 ---
