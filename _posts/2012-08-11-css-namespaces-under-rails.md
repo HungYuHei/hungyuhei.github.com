@@ -16,12 +16,10 @@ Namespaces（命名空间）的作用最主要是可以模块化 (modular)，以
 在 layout 中：
 
     # app/views/layouts/application.html.erb
-   ……
+    ……
     <body class="<%= content_for?(:body_class) ? yield(:body_class) : '' %>">
       ……
     </body>
-    ……
-      
 
 然后在 view 文件中加上这段代码，就可以将 layout 中 body 标签的 class 定义为 `example_name`：
 
