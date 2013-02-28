@@ -9,10 +9,11 @@ tags: [Git]
 
 ## pull --rebase 
 ### 首先是吐嘈
+<br>
 
 ![git pull --rebase](http://ww4.sinaimg.cn/large/a74e55b4jw1dvnhy8lfndj.jpg)
 
-如果你正在 code review，看到上图（下文将称之为：提交线图）之后，特别是像我这样有某种洁癖的人，是不是首先有种头晕眼花的感觉，继而有种想自插双眼的冲突呢？如果是的话，请看下文吧 :)
+如果你正在 code review，看到上图（下文将称之为：提交线图）之后，特别是像我这样有某种洁癖的人，是否感觉特别难受？如果是的话，请看下文吧 :)
 
 ### 为什么
 
@@ -22,17 +23,17 @@ Git 作为分布式版本控制系统，所有修改操作都是基于本地的�
 
 其实在 pull 操作的时候，，使用 `git pull --rebase ` 选项即可很好地解决上述问题。
 
-加上 `--rebase` 的作用是，提交线图有分叉的话，Git 会 rebase 策略来代替默认的 merge 策略。
+加上 `--rebase` 参数的作用是，提交线图有分叉的话，Git 会 rebase 策略来代替默认的 merge 策略。
 
 使用 rebase 策略有什么好处呢？借用一下 `man git-merge` 中的图就可以很好地说明清楚了。
 
-假设提交线图在执行 pull 之前是这样的：
+假设提交线图在执行 pull 前是这样的：
 
                      A---B---C  remotes/origin/master
                     /
                D---E---F---G  master
                
-如果是执行 `git pull` 的话，提交线图会变成这样：
+如果是执行 `git pull` 后，提交线图会变成这样：
 
                      A---B---C remotes/origin/master
                     /         \
@@ -86,6 +87,8 @@ Git 作为分布式版本控制系统，所有修改操作都是基于本地的�
 **再次提醒：像之前提到的，rebase 是『危险行为』，建议你足够熟悉 git 时才这么做，否则的话是得不偿失啊。**
 
 ## 总结
-使用 `git pull --rebase` 和 `git merge --no-ff` 其实和直接使用 `git pull` `git merge` 得到的实际效果应该是一样
+使用 `git pull --rebase` 和 `git merge --no-ff` 其实和直接使用 `git pull` `git merge` 得到的代码应该是一样。
+
+使用 `git pull --rebase` 主要是为是将提交约线图平坦化，而 `git merge --no-ff` 则是刻意制造分叉。
 
 一言以蔽之：如果你有点洁癖症状，才考虑用它们吧。
