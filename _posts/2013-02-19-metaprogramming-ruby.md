@@ -108,7 +108,8 @@ block 使用 `yield` 语句来调用，Proc 使用 `yield` 语句来调用。
       end
     end
  
-    obj = MyClass.new(1)m = obj.method :my_methodm.call  # => 1
+    obj = MyClass.new(1)
+    m = obj.method :my_methodm.call  # => 1
     unbound = m.unbindanother_obj = MyClass.new(2)
     m = unbound.bind(another_obj)m.call                  # => 2
 
