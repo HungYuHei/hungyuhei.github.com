@@ -7,11 +7,11 @@ title: 利用 Redis 记录 PageView 并实时查询数据
 
 不过本文的需求是基于：为用户提供跟踪其发布的某个页面的 PageView (PV) 功能，并可以实时地按小时、日、周、月查询数据。如果使用关系数据库（如 PostgreSQL），为了实现前面提到的查询条件，必须编写复杂的 SQL 查询语句，复杂的 SQL 查询语句意味着需要消耗服务器一定的计算量，效果不够好，最后经过推敲，决定使用 Redis 来实现，理由如下：
 
-<ul>
-  <li>内存数据库，高性能</li>
-  <li>key-value 数据库，基于时间日期来构建 key，能够非常方便实现复杂查询</li>
-  <li>支持复杂的数据特性，比如 Hash, List, Set 等</li>
-</ul>
+* 内存数据库，高性能
+* key-value 数据库，基于时间日期来构建 key，能够非常方便实现复杂查询
+* 支持复杂的数据特性，比如 Hash, List, Set 等
+
+<br>
 
 ## 最终效果
 
@@ -40,10 +40,11 @@ title: 利用 Redis 记录 PageView 并实时查询数据
 
     "pageviews:post:12" => { '2012-07-18' => 1731, '2012-07-18:15' => 357, '2012-07-18:21' => 241 }
     
+<br>
+
 ## 实现（基于 Rails 3.1+）
 
-首先安装 `redis` 这个 Gem 来实现通过 Ruby 操作 Redis
-
+首先安装 `redis` 这个 Gem 来实现通过 Ruby 操作 Redis  
 在 Gemfile 中添加： `gem 'redis', '~> 3.0.1'`，配置请参考 [https://github.com/redis/redis-rb](https://github.com/redis/redis-rb)
 
 ### Model
@@ -95,16 +96,13 @@ title: 利用 Redis 记录 PageView 并实时查询数据
       end
     end
     
-incr 这个方法实际上是将当天和当前小时的 PV 值都加 1
-
+`incr` 这个方法实际上是将当天和当前小时的 PV 值都加 1  
 另外留意一下 `$redis.multi`，实际上 Redis 也有类似关系数据事务的概念。reference: [http://redis.io/topics/transactions](http://redis.io/topics/transactions)
 
 ### 查询数据
  
-到此为止，已经实现了当用户访问指定页面就会将增加对应的 PV 值，接下来就是实现查询数据，以实现查询日期为例子
-
-通过 `redis` 这个 gem 扩展的 `mapped_hmget` 方法可以很方便地查询出数据（[详细 API 说明](http://rubydoc.info/github/redis/redis-rb/Redis#mapped_hmget-instance_method)）
- 
+到此为止，已经实现了当用户访问指定页面就会将增加对应的 PV 值，接下来就是实现查询数据，以实现查询日期为例子。
+通过 `redis` 这个 gem 扩展的 `mapped_hmget` 方法可以很方便地查询出数据（[详细 API 说明](http://rubydoc.info/github/redis/redis-rb/Redis#mapped_hmget-instance_method)）。
 回到 `PageView` Model，实现 `fetch` 方法查询指定日期范围的 PV 值
  
     def fetch(begin_at, end_at)
@@ -123,7 +121,7 @@ incr 这个方法实际上是将当天和当前小时的 PV 值都加 1
     1.9.3p194 :029 > pv = PageView.new(1210).fetch(begin_date, end_date)
      => {"2012-07-17"=>"3", "2012-07-18"=>"1", "2012-07-19"=>"6", "2012-07-20"=>"8"}
      
-查看执行结果 ` {"2012-07-17"=>"3", "2012-07-18"=>"1", "2012-07-19"=>"6", "2012-07-20"=>"8"}` 可以得到我们想要的日期和对应的 PV 值
+查看执行结果 ` {"2012-07-17"=>"3", "2012-07-18"=>"1", "2012-07-19"=>"6", "2012-07-20"=>"8"}` 可以得到我们想要的日期和对应的 PV 值。
 
 下一步创建 `PageViewsController`，在命令行执行 `rails g controller page_views show`，编辑 PageViewsController：
 
@@ -155,8 +153,7 @@ incr 这个方法实际上是将当天和当前小时的 PV 值都加 1
       end
     end
     
-修改后，`fetch` 方法将会返回类似这个的数据 `[{"k":"2012-07-19","v":6},{"k":"2012-07-20","v":8}]`
-
+修改后，`fetch` 方法将会返回类似这个的数据 `[{"k":"2012-07-19","v":6},{"k":"2012-07-20","v":8}]`。
 到此为止，`MVC` 结构中的 `M` 和 `V` 都实现得差不多了，接下来就是实现 `V`，即 `View`
 
 ### View
@@ -189,6 +186,8 @@ incr 这个方法实际上是将当天和当前小时的 PV 值都加 1
       prettyPrint();
     </script>
     
+<br>
+
 ## Last but not least...
 
 如果还有进一步的需求，例如唯一身份访问者等，配合 Redis 的 Set，实现起来也不是难事。

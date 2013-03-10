@@ -3,7 +3,7 @@ layout: post
 title: irb 不能输入中文
 ---
 
-之前将 Ruby 版本从 1.9.2 升级到 1.9.3 之后，irb 就不能输入中文了
+之前将 Ruby 版本从 1.9.2 升级到 1.9.3 之后，irb 就不能输入中文了。
 
 问题出现的原因很可能是：
 
@@ -20,8 +20,6 @@ title: irb 不能输入中文
 
     rvm reinstall 1.9.3 --with-readline-dir=YOUR_READLINE_PATH
 
-**如果你是 Mac 平台，如果安装失败，尝试加上 `--with-gcc=clang`**
-
----
+如果你是 Mac 平台，如果安装失败，尝试加上 `--with-gcc=clang`
 
 Reference: [https://rvm.io/packages/readline/](https://rvm.io/packages/readline/)
