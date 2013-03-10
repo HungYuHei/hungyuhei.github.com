@@ -1,11 +1,7 @@
 ---
 layout: post
 title: "Ubuntu 10.04 安装 JDK7"
-description: "Ubuntu 10.04 安装 JDK7"
-category: 
-tags: [Linux]
 ---
-{% include JB/setup %}
 
 实现全文搜索时用到了 [Sunspot](http://sunspot.github.com/)，因此在服务器上需要搭建 Java 的运行环境
 

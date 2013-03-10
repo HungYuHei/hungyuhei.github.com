@@ -1,11 +1,7 @@
 ---
 layout: post
 title: "利用 Redis 记录 PageView 并实时查询数据"
-description: "利用 Redis 记录 PageView 并实时查询数据"
-category: 
-tags: [Redis, Rails]
 ---
-{% include JB/setup %}
 
 如果只是网站管理员，对于 PageView 的跟踪管理使用 Google Analytics 已经足够强大了，完全没有必要花人力实现另一套工具出来。
 

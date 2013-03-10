@@ -1,11 +1,7 @@
 ---
 layout: post
 title: "修复 Nginx 错误：413 Request Entity Too Large"
-description: "修复 Nginx 错误：413 Request Entity Too Large"
-category: 
-tags: ['Nginx']
 ---
-{% include JB/setup %}
 
 查了一下[官网wiki](http://wiki.nginx.org/HttpCoreModule#client_max_body_size)后发现，原来nginx最大body size默认设为1MB，当用户上传的文件大于这个值就会导致 413 Request Entity Too Large 这个错误。
 

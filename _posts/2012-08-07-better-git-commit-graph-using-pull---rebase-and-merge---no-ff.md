@@ -1,11 +1,7 @@
 ---
 layout: post
 title: "洁癖者用 Git：pull --rebase 和 merge --no-ff"
-description: "洁癖者用 Git：pull --rebase 和 merge --no-ff"
-category: 
-tags: [Git]
 ---
-{% include JB/setup %}
 
 ## pull --rebase 
 ### 首先是吐嘈

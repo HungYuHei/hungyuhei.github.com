@@ -1,9 +1,6 @@
 ---
 layout: post
 title: "Rails 源码学习笔记 1：ActiveSupport"
-description: "Rails 源码学习笔记 1：ActiveSupport"
-category: 
-tags: [Rails, ActiveSupport]
 ---
 
 Rails 默认将运行环境分为 production, test, development 三种，而在开发 Rails 的过程中，有些时候需要判断当前的运行环境，从而作出不同的操作。

@@ -1,11 +1,7 @@
 ---
 layout: post
 title: "Rails 源码学习笔记"
-description: "Rails 源码学习笔记"
-category: 
-tags: [Rails]
 ---
-{% include JB/setup %}
 
 ## 相关链接
 

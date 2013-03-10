@@ -1,11 +1,7 @@
 ---
 layout: post
 title: "基于 Rails 实现 CSS Namespaces 机制"
-description: "基于 Rails 实现 CSS Namespaces 机制"
-category: 
-tags: [Rails, CSS]
 ---
-{% include JB/setup %}
 
 Namespaces（命名空间）的作用最主要是可以模块化 (modular)，以方便组织代码和防止代码冲突。如果某一门编程语言缺少 Namespaces，我想它很难称得上是一门健全的语言。当然 CSS 只能算是描述性语言，算不上是编程语言，所以天生缺少 Namespaces 的机制。
 

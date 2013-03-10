@@ -1,11 +1,7 @@
 ---
 layout: post
 title: "《Ruby 元编程》摘录"
-description: "Ruby 元编程"
-category: 
-tags: [Ruby]
 ---
-{% include JB/setup %}
 
 除去 Rails 元编程那章，已经《Ruby 元编程》读了两遍多了，伴隨着的也是自己由初级水平向中级水平的提升。
 
