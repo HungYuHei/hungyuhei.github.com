@@ -14,7 +14,7 @@ title: 《Ruby 元编程》摘录
 
 「向右一步，再向上」：
 
-<img src="http://ww4.sinaimg.cn/large/a74ecc4cjw1e1y3eiio3hj.jpg" alt="方法查找" width="610" />
+<img src="http://ww4.sinaimg.cn/large/a74ecc4cjw1e1y3eiio3hj.jpg" alt="方法查找" width="617" />
 
 ## 动态方法
 

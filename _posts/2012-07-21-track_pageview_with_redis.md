@@ -17,7 +17,7 @@ title: 利用 Redis 记录 PageView 并实时查询数据
 
 文字是抽象的，程序更是抽象的，所以先放出最终实现出来的效果：
 
-![最终效果](http://ww4.sinaimg.cn/large/a74ecc4cjw1dv2nwni798j.jpg)
+<img src="http://ww4.sinaimg.cn/large/a74ecc4cjw1dv2nwni798j.jpg" width="617" alt="最终效果" />
 
 ## 数据建模
 
