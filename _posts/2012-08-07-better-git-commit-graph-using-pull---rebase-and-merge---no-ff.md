@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "洁癖者用 Git：pull --rebase 和 merge --no-ff"
+title: 洁癖者用 Git：pull --rebase 和 merge --no-ff
 ---
 
 ## pull --rebase 

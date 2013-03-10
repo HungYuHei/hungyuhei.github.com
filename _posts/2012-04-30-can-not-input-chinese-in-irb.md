@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "irb 不能输入中文"
+title: irb 不能输入中文
 ---
 
 之前将 Ruby 版本从 1.9.2 升级到 1.9.3 之后，irb 就不能输入中文了

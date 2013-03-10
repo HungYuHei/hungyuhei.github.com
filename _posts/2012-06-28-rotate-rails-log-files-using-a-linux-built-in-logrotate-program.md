@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "使用 Linux 的 logrotate 拆分 Rails 的 log"
+title: 使用 Linux 的 logrotate 拆分 Rails 的 log
 ---
 
 安装 logrotate

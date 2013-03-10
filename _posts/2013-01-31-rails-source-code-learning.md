@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Rails 源码学习笔记"
+title: Rails 源码学习笔记
 ---
 
 ## 相关链接

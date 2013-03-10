@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "使用 git-shell 增强 Git 服务器安全"
+title: 使用 git-shell 增强 Git 服务器安全
 ---
 
 在开发一个项目时，往往需要多人共用一个 Git 库，但同时又希望限制其它人只能使用 Git 库而不能对服务器进行其它操作。
