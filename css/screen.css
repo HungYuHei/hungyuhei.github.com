@@ -129,6 +129,7 @@ ul.posts {
     }
 
     .site .footer .social {
+      float: left;
       margin-top: 15px;
     }
 
