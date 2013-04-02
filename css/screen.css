@@ -128,9 +128,34 @@ ul.posts {
       margin-right: 3em;
     }
 
-      .site .footer .contact a {
-        color: #8085C1;
+    .site .footer .social {
+      margin-top: 15px;
+    }
+
+      .site .footer .social a {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        text-indent: -9999px;
+        margin-right: 10px;
       }
+
+        .site .footer .social a.twitter {
+          border: 1px solid #55CFF8;
+          background: url('/images/twitter.png') center no-repeat #55cff8;
+        }
+        .site .footer .social a.twitter:hover {
+          border: 1px solid #24c1f6;
+        }
+
+        .site .footer .social a.github {
+          border: 1px solid #afb6ca;
+          background: url('/images/github.png') center no-repeat #afb6ca;
+        }
+        .site .footer .social a.github:hover {
+          border: 1px solid #909ab6;
+        }
 
     .site .footer .rss {
       margin-top: 1.1em;
