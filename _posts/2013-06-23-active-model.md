@@ -6,21 +6,14 @@ title: Rails 源码学习笔记 2：漫游 ActiveModel
 模块化大概是计算机编程中一个永恒的追求吧。Rails 3 相对于 Rails 2 其中的一大改进就是更完善的模块化，
 因此这也带给了 Rails 良好的扩展性。
 
-Rails 默认使用 ActiveRecord 作为 ORM (PostgreSQL)
-
-```
-使用 ActiveRecord 的例子
-```
-
-如果要使用其它 ORM，像 MongoDB，那么用 Mongoid
-如何保持兼容 Rails 原有的 Controller 和 View 呢，答案是 ActiveModel
+例如 Rails 默认使用 ActiveRecord 作为 ORM，但使用 MongoDB 的人往往改用 Mongoid 作为 ORM，
+MVC 中的 M 变了，Rails 是如何做到兼容性呢，答案是 ActiveModel。
+正如 José Valim 在 Crafting Rails Applications 这书中所说：
 
 > Active Model was created to hold the behavior shared between Active Record and
 > Active Resource in modules that can be cherry-picked at will.
 > It’s also responsible for defining the API required by Rails controllers and views,
 > so any other ORM can use Active Model to ensure Rails behaves exactly as it would with Active Record.
->
-> Crafting Rails Applications -- José Valim
 
 [ActiveModel 源码](https://github.com/rails/rails/blob/master/activemodel/lib/active_model.rb) 
 
@@ -76,7 +69,7 @@ Rails 的 Controller 和 View helper 在调用 Model 的任何方法前，会先
     user_path(@user)
     div_for(@user)
 
-实际在调用上面的第一行代码时，Rails 会调用 `@post.to_param` 并根据返回的结果来生成 URL。  
+实际在调用上面的第一行代码时，Rails 会调用 `@user.to_param` 并根据返回的结果来生成 URL。
 而对于第二行代码，Rails 会调用 `@user.to_key` 并根据返回的结果来生成 div 元素。
 
 `to_key` 方法应当返回能够唯一识别 Model 的 keys 数组，一般是 `[id]`  
@@ -95,6 +88,6 @@ Rails 的 Controller 和 View helper 在调用 Model 的任何方法前，会先
     end
 
 
-
+\# to be continued...
 
 
