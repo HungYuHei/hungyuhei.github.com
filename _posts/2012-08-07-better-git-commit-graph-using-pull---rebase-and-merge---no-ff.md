@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 洁癖者用 Git：pull --rebase 和 merge --no-ff
+permalink: /2012/08/07/better-git-commit-graph-using-pull---rebase-and-merge---no-ff.html
 ---
 
 ## pull --rebase 
